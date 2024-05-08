@@ -1,0 +1,38 @@
+import pandas as pd
+
+df = pd.read_csv("academic_performance.csv")
+
+df
+
+df.isnull()
+
+df.isnull().sum()
+
+df.dropna()
+
+df["marks"] = df["marks"].fillna(df["marks"].mean())
+
+df
+
+df.boxplot()
+
+newdf = df[df["marks"]>30]
+
+newdf
+
+newdf.boxplot()
+
+df["name"].replace({" ":"abhi"},inplace=True)
+
+df
+
+df["name"] = df["name"].fillna("bencho")
+
+df
+
+df["name"].replace({"default":"bencho"},inplace=True)
+
+df
+
+
+

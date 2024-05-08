@@ -1,0 +1,36 @@
+import pandas as pd
+
+df = pd.read_csv("academic_performance.csv")
+
+df
+
+df.isnull()
+
+df.isnull().sum()
+
+df.notnull()
+
+df.notnull().sum()
+
+df.describe()
+
+df.size
+
+df.ndim
+
+df.shape
+
+df.info()
+
+df = df.dropna()
+
+df
+
+df["marks"] = df["marks"].astype(int)
+
+df
+
+df["grade"].replace({"F": 0,"P": 1} ,inplace = True)
+
+df
+
